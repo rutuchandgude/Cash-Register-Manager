@@ -1,15 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 *{
-
-
+    margin: 0;
+    padding: 0;
 }
-
-.container{
-    display:flex;
-    flex-direction:column;
-    width:50vw;
-    
-}
-
 body{
-    background-color: burlywood;
+    font-family: 'Ubuntu', sans-serif;
+}
+.title_div{
+    margin: 1rem 1rem 0 1rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    background: #db9363;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+}
+.input_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.input_div{
+    margin: 1rem 0;
+}
+.input_section label{
+    margin-top: 0.5rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+#cash_given{
+    display: none;
+}
+#label_cash_given{
+    display: none;
+}
+.input_section button{
+    cursor: pointer;
+    margin-top: 1.5rem;
+    background: rgb(228, 145, 78);
+    border: none;
+    padding: 0.5rem 1.5em;
+    font-weight: 700;
+    border-radius: 0.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#error-message{
+    margin: 1rem auto 0 auto;
+    font-weight: 700;
+    color: rgb(236, 42, 42);
+}
+ .result_section{
+    display: flex;
+    margin-top: 2rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+} 
+
+
+@media (max-width:800px){
+    table{
+        font-size: 0.8rem;
+    }
 }
