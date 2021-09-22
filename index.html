@@ -6,57 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register Manager</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<center>
-<body>
-
-        <div class="container">
-
-    <h1 class="heading">Cash Register Manager</h1>
-    <p class="discription">Enter the bill amount and cash given by the customer and <br> know the minimum number of notes to return.</p>
-
-    <label for="bill-amount" >Bill Amount</label><br>
-    <input id="bill-amount" type="text" ></input>
-
-<br><br>
-
-    <label for="cash-given">Cash Given</label><br>
-    <input id="cash-given" type="text" /><br><br>
-
-    <button id="check-button">check</button>
-           <p id="error-message"></p>
-            
-    <table class="change-table">
         
-        <caption>
-            Return Change:
-        </caption>
-
-        <tr>
-            <th>no of notes</th>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-        </tr>
-        <br><br>
-        <tr>
-            <th>Notes</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>100</td>
-            <td>20</td>
-            <td>10</td>
-            <td>5</td>
-            <td>1</td>
-        </tr>
-    </table>
-</div>
-<script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+</head>
+<body>
+    <h2 class="title_div">Cash Register Manager</h2>
+    <div class="container">
+        <div class="input_section">
+            <label for="total_bill">Total bill amount :</label>
+            <input type="number" onchange="opencashGiven()" min="1" id="total_bill" autofocus>
+            <label for="cash_given" id='label_cash_given'>Cash given :</label>
+            <input type="number" min="1" id="cash_given">
+            <button id='submit_button' >Check</button>
+            <p id="error-message"></p>
+        </div>
+        <div class="result_section" id='result_section'> 
+            <table class="change-table">
+                <caption style="margin: 1rem auto;">Return Change</caption>
+                <tr>
+                    <th>No.of notes</th>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                    <td data-value= "" class="no-of-notes">0</td>
+                </tr>
+                <tr>
+                    <th>Notes available</th>
+                    <td data-value= "2000" class="no-of-notes_td">2000</td>
+                    <td data-value= "500" class="no-of-notes_td">500</td>
+                    <td data-value= "100" class="no-of-notes_td">100</td>
+                    <td data-value= "20" class="no-of-notes_td">20</td>
+                    <td data-value= "10" class="no-of-notes_td">10</td>
+                    <td data-value= "5" class="no-of-notes_td">5</td>
+                    <td data-value= "1" class="no-of-notes_td">1</td>                
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
 </body>
-</center>
-
-</html>                                             
+</html>
